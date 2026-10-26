@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Light gray body background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section Styling */
+header {
+    background-color: #aed9e0; /* Teal background for header */
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    color: #343a40; /* Dark text color */
+    font-size: 48px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Navbar Hover Effect: Underline */
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Content Container */
+.main-container {
+    max-width: 800px;
+    background-color: white;
+    margin: 50px auto; /* Centered on the page */
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    flex: 1;
+}
+
+.main-container h2 {
+    color: #343a40;
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.main-container p {
+    color: #343a40;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.details-btn {
+    background-color: #138496; /* Teal button color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #0f6674; /* Darker teal on hover */
+}
+
+.car-image {
+    max-width: 400px;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* Features Section */
+.features-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card h3 {
+    color: #028482; /* Teal color for feature heading */
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.feature-card p {
+    color: #343a40;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Feature Hover Effect: Move Up */
+.hover-up:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Entry Animations --- */
+
+/* Header Slide Down & Fade In */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-down {
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Elements Slide Up & Fade In */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both; /* Keeps element in final state */
+}
+
+/* Car Image Scale In */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+.scale-in {
+    animation: scaleIn 1s ease-out 0.5s; /* Added delay */
+    animation-fill-mode: both;
+}
